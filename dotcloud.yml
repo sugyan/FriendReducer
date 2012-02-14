@@ -1,3 +1,5 @@
 www:
   type: perl
   approot: FriendReducer
+  environment:
+    PLACK_ENV: deployment

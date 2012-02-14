@@ -24,34 +24,18 @@
             <div class="topbar-inner">
                 <div class="container">
                 <h3><a href="#">FriendReducer</a></h3>
-                <ul class="nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">Dropdown</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Secondary link</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Another link</a></li>
-                    </ul>
-                    </li>
-                </ul>
-                <form class="pull-left" action="">
-                    <input type="text" placeholder="Search">
-                </form>
                 <ul class="nav secondary-nav">
+                  [% IF c().session.get('name') %]
                     <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">Dropdown</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Secondary link</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Another link</a></li>
-                    </ul>
-                    </li>
+                      <a href="#" class="dropdown-toggle">[% c().session.get('name') %]</a>
+                      <ul class="dropdown-menu">
+                        <li><a id="signout" href="#">sign out</a></li>
+                        <form id="signout_form" action="/account/logout" method="post"></form>
+                      </ul>
+                   </li>
+                  [% ELSE %]
+                  <li><a href="/auth/twitter/authenticate">sign in</a></li>
+                  [% END %]
                 </ul>
                 </div>
             </div><!-- /topbar-inner -->

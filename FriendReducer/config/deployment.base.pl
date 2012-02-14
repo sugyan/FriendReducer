@@ -16,4 +16,10 @@ if ( -d '/home/dotcloud/') {
             sqlite_unicode => 1,
         }
     ],
+    'Auth' => +{
+        'Twitter' => +{
+            consumer_key    => '********************',
+            consumer_secret => '******************************************',
+        },
+    },
 };

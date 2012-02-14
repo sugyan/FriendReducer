@@ -48,6 +48,14 @@ use Text::Xslate;
 __PACKAGE__->load_plugins(
     'Web::FillInFormLite',
     'Web::CSRFDefender',
+    'Web::Auth', +{
+        module => 'Twitter',
+        on_finished => sub {
+            my ($c, $access_token, $access_token_secret, $user_id, $screen_name) = @_;
+            $c->session->set('name' => $screen_name);
+            return $c->redirect('/');
+        },
+    },
 );
 
 # for your security

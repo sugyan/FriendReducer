@@ -12,3 +12,5 @@ META.json
 META.yml
 MYMETA.json
 MYMETA.yml
+config/deployment.pl
+config/development.pl
