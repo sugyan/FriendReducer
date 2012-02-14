@@ -1,2 +1,3 @@
 www:
   type: perl
+  approot: FriendReducer
