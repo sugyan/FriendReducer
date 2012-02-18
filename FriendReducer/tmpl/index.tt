@@ -3,6 +3,17 @@
 <div class="row">
     <div class="span10">
       <button id="start" class="btn">Start!</button>
+      <div id="main_content">
+        <div id="status">
+          <span id="screen_name"></span> <span id="name"></span>
+          <span id="connection"></span>
+        </div>
+        <div>Unfollow in <span id="timer"></span> seconds.</div>
+        <div id="buttons">
+          <button id="cancel" class="btn primary">Don't unfollow!</button>
+          <button id="unfollow" class="btn danger">Unfollow!</button>
+        </div>
+      </div>
     </div>
     <div class="span6">
     </div>
