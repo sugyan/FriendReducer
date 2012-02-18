@@ -18,6 +18,7 @@ WriteMakefile(
         'Test::WWW::Mechanize::PSGI'      => '0',
         'Time::Piece'                     => '1.20',
         'Amon2::Auth'                     => '0.02',
+        'Net::Twitter::Lite'              => '0.10004',
     },
     MIN_PERL_VERSION => '5.008001',
     (-d 'xt' and $ENV{AUTOMATED_TESTING} || $ENV{RELEASE_TESTING}) ? (
