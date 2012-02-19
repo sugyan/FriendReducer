@@ -22,7 +22,7 @@
         <div class="topbar" data-dropdown="dropdown">
             <div class="topbar-inner">
                 <div class="container">
-                <h3><a href="#">FriendReducer</a></h3>
+                <h3><a href="/">FriendReducer</a></h3>
                 <ul class="nav secondary-nav">
                   [% IF c().session.get('auth') %]
                     <li class="dropdown">
