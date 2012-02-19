@@ -24,7 +24,7 @@
                 <div class="container">
                 <h3><a href="#">FriendReducer</a></h3>
                 <ul class="nav secondary-nav">
-                  [% IF c().session.get('name') %]
+                  [% IF c().session.get('auth') %]
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle">[% c().session.get('name') %]</a>
                       <ul class="dropdown-menu">

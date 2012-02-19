@@ -2,7 +2,9 @@
 
 <div class="row">
     <div class="span10">
+      [% IF c().session.get('auth') %]
       <button id="start" class="btn">Start!</button>
+      [% END %]
       <div id="main_content">
         <form></form>
         <div id="status">
