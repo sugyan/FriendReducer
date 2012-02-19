@@ -87,4 +87,21 @@ __PACKAGE__->add_trigger(
     },
 );
 
+# auth for API
+use Net::Twitter::Lite;
+sub auth {
+    my ($c) = @_;
+    if (my $auth = $c->session->get('auth')) {
+        Net::Twitter::Lite->new(
+            consumer_key        => $c->config->{Auth}{Twitter}{consumer_key},
+            consumer_secret     => $c->config->{Auth}{Twitter}{consumer_secret},
+            access_token        => $auth->{access_token},
+            access_token_secret => $auth->{access_token_secret},
+        );
+    }
+    else {
+        undef;
+    }
+}
+
 1;

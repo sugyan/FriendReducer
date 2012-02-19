@@ -16,6 +16,10 @@ footer {
 @media screen and (max-device-width: 480px) {
 }
 
+.row {
+    height: 200px;
+}
+
 #main_content {
     display: none;
 }
@@ -30,4 +34,9 @@ footer {
     line-height: 100px;
     font-weight: bold;
     font-size: 100px;
+}
+
+#logs {
+    height: 200px;
+    overflow: auto;
 }
