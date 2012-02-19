@@ -45,7 +45,7 @@
             [% content %]
         </div>
         <footer class="footer">
-            Powered by <a href="http://amon.64p.org/">Amon2</a>
+            Powered by <a href="http://amon.64p.org/">Amon2</a>, Created by <a href="https://twitter.com/#!/sugyan">@sugyan</a>
         </footer>
     </div>
 </body>
